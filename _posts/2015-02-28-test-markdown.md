@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BMT: Big Merge Tracker
+title: BMT Big Merge Tracker
 subtitle: Conducts clustering
 ---
 
