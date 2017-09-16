@@ -2,28 +2,68 @@
 layout: default
 use-site-title: true
 ---
-<center>
-<figure>
-  <img src="img/profile-pic.jpg"  width="190" height="260">
-</figure>
-</center>
-<br/>
-I am an Assistant Professor of Data Sciences and Operations in the University of Southern California. I am a member of the USC Marshall Statistics Group. I graduated from Stanford University with a Statistics PhD in 2013, after defending <a href='http://www-bcf.usc.edu/~gourab/gourab-thesis.pdf'><i><font face="verdana" color="teal">this thesis</font></i></a>.  My advisor at Stanford was  <a href='http://statweb.stanford.edu/~imj/'><font face="verdana" color="teal"> Iain Johnstone</font></a>. Prior to that, I studied at <a href='http://www.isical.ac.in'><font face="verdana" color="teal">Indian Statistical Institute</font></a> for my  Bachelor's and Master's degrees. 
-<br/>
-<br/>
-<b>Research Interests:</b>  
- Predictive Inference, Empirical Bayes Methods, Prediction under Asymmetric losses, Sparse Estimation theory, Hierarchical Models, Connections between Estimation & Prediction theory.
-<br/>
-<br/>
-<b>Applications:</b> Single-Cell Virology and analyzing cellular remodeling in presence of pathogens. These applications  involves two-sample inference compounded with heterogeniety and sparsity issues. 
-<br/>
-<br/>
-See my <a href='https://gmukherjee.github.io/Research/'><font face="verdana" color="teal">Research</font></a> page for further details.
-<br/>
-<br/>
-<b>Contact:</b>
-3670 Trousdale Parkway,
-Bridge Hall 308, 
-University of Southern california,
-Los Angeles, CA 90089-0809.
-<br/>
+<div class="posts-list">
+  {% for post in paginator.posts %}
+  <article class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+	  <h2 class="post-title">{{ post.title }}</h2>
+
+	  {% if post.subtitle %}
+	  <h3 class="post-subtitle">
+	    {{ post.subtitle }}
+	  </h3>
+	  {% endif %}
+    </a>
+
+    <p class="post-meta">
+      Posted on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+
+    <div class="post-entry-container">
+      {% if post.image %}
+      <div class="post-image">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <img src="{{ post.image }}">
+        </a>
+      </div>
+      {% endif %}
+      <div class="post-entry">
+        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+        {% assign excerpt_word_count = post.excerpt | number_of_words %}
+        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if post.tags.size > 0 %}
+    <div class="blog-tags">
+      Tags:
+      {% if site.link-tags %}
+      {% for tag in post.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+      {% else %}
+        {{ post.tags | join: ", " }}
+      {% endif %}
+    </div>
+    {% endif %}
+
+   </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<ul class="pager main-pager">
+  {% if paginator.previous_page %}
+  <li class="previous">
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
