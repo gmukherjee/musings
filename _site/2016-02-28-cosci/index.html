@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>404 - Page not found</title>
+  <title>COSCI</title>
 
   <meta name="author" content="Gourab Mukherjee" />
 
+  
+  <meta name="description" content="ranking and screening non-informative features in large scale cluster analysis">
   
 
   <link rel="alternate" type="application/rss+xml" title="Gourab Mukherjee - home" href="/Software/feed.xml" />
@@ -52,26 +54,19 @@
   
 
   
-  <meta property="og:title" content="404 - Page not found" />
+  <meta property="og:title" content="COSCI" />
   
 
    
-  <meta property="og:description" content="
-  Whoops, this page doesn't exist.
-  Move along. (404 error)
-  
-
-  
-
-">
+  <meta property="og:description" content="ranking and screening non-informative features in large scale cluster analysis">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/404" />
-  <link rel="canonical" href="http://localhost:4000/404" />
+  <meta property="og:url" content="http://localhost:4000/2016-02-28-cosci/" />
+  <link rel="canonical" href="http://localhost:4000/2016-02-28-cosci/" />
   
 
   
@@ -83,18 +78,11 @@
   <meta name="twitter:creator" content="@yourname" />
 
   
-  <meta name="twitter:title" content="404 - Page not found" />
+  <meta name="twitter:title" content="COSCI" />
   
 
   
-  <meta name="twitter:description" content="
-  Whoops, this page doesn't exist.
-  Move along. (404 error)
-  
-
-  
-
-">
+  <meta name="twitter:description" content="ranking and screening non-informative features in large scale cluster analysis">
   
 
   
@@ -174,17 +162,96 @@
 </nav>
 
 
-    <div class="intro-header"></div>
+    <!-- TODO this file has become a mess, refactor it -->
 
-<div role="main" class="container">
-  <div class="text-center">
-  <h1>Whoops, this page doesn't exist.</h1>
-  <h1>Move along. (404 error)</h1>
-  <br/>
 
-  <img src="/Software/img/404-southpark.jpg" />
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>COSCI</h1>
+		  
+		    
+			<h2 class="post-subheading">ranking and screening non-informative features in large scale cluster analysis</h2>
+			
+		  
+		  
+		  
+		  <span class="post-meta">Posted on February 28, 2016</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</header>
 
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <article role="main" class="blog-post">
+        <p>COSCI (COnvex Screening for Cluster Information) is a non-parametric method for ranking and screening non-informative features in large scale cluster analysis problems. Unlike the non-parametric density estimation based screening techniques, COSCI is very
+scalable, and can successfully handle datasets with more than one million observations. COSCI discards non-informative features by first computing a clustering score for the clustering tree constructed for each feature, and then thresholds the resulting values.</p>
+
+<h2 id="perfect-screening-property">Perfect Screening Property</h2>
+
+<p>COSCI produces a score for each feature, which reflects its relative importance for clustering, and then screens out the features with lower scores. It enjoys a perfect screening property in the sense that under mild regularity conditions on the densities of the features, COSCI screens out all the non-informative features with high probability.</p>
+
+<h2 id="how-to-use-this-repository">How to use this repository?</h2>
+
+<p>This repository holds the scripts that reproduce the analysis in the paper [1]. Send me an email if anything does not work as expected.</p>
+
+<h1 id="references">References</h1>
+<p>[1.] <a href="http://www.sciencedirect.com/science/article/pii/S0047259X17300271">Feature Screening in Large Scale Cluster Analysis</a>  <br />
+Banerjee, T., Mukherjee, G. and Radchenko P.  <em>Journal of Multivariate Analysis, Volume 161, 2017, Pages 191-212, ISSN 0047-259X</em></p>
+
+<p>[2.] <a href="http://onlinelibrary.wiley.com/doi/10.1111/rssb.12226/abstract">Convex clustering via ℓ1 fusion penalization</a> <br />
+Radchenko P., Mukherjee G.   <em>J. R. Stat. Soc. Ser. B Stat. Methodol. (2017)</em></p>
+
+      </article>
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/Software/2016-01-28-bmt/" data-toggle="tooltip" data-placement="top" title="BMT">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="/Software/2016-03-28-fusionclust/" data-toggle="tooltip" data-placement="top" title="fusionclust">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+
+        </div>
+      
+    </div>
+  </div>
 </div>
 
     <footer>

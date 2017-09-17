@@ -8,8 +8,8 @@
 #baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
-url: "https://gmukherjee.github.io/Software1/"
-baseurl: "/Software1"
+url: "https://gmukherjee.github.io/Software/"
+baseurl: "/Software"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
@@ -27,7 +27,7 @@ use-site-title: true
 navbar-links:
   Research: "https://gmukherjee.github.io/Research/"
   Teaching: "https://gmukherjee.github.io/Teaching"
-  Software: "https://gmukherjee.github.io/Software1/"
+  Software: "https://gmukherjee.github.io/Software/"
  
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -228,4 +228,4 @@ gems:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
