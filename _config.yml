@@ -25,7 +25,7 @@ use-site-title: true
 
 # List of links in the navigation bar
 navbar-links:
-  Research: "https://gmukherjee.github.io/Research/"
+  Research: Research
   Teaching: "https://gmukherjee.github.io/Teaching"
   Software: "https://gmukherjee.github.io/Software/"
  
