@@ -1,7 +1,7 @@
 ---
 layout: post
 title: fusionclust
-subtitle: R Library for fusion clustering
+subtitle: R package for fusion clustering of modern massive datasets
 ---
 The goal of `fusionclust` is to conduct clustering and feature screening in large scale cluster analysis problems. In particular, `fusionclust` provides the Big Merge Tracker (BMT) and COSCI algorithms for convex clustering and feature screening using an ℓ1 fusion penalty.  
 
