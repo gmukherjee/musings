@@ -9,7 +9,7 @@ url: "http://gmukherjee.github.io/"
 
 # If you are building a GitHub project page then use these settings:
 #url: "https://gmukherjee.github.io/Software/"
-baseurl: "/Software"
+baseurl: "/musings"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
@@ -29,7 +29,9 @@ navbar-links:
   Research: "https://gmukherjee.github.io/Research"
   Teaching: "https://gmukherjee.github.io/Teaching"
   Software: "https://gmukherjee.github.io/Software/"
+  Blog: "https://gmukherjee.github.io/musings/"
   Personal: "https://gmukherjee.github.io/Personal/"
+  
  
 
 # Image to show in the navigation bar - image must be a square (width = height)
